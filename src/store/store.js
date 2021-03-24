@@ -18,7 +18,6 @@ export const store = new Vuex.Store({
         async FETCH_LIST({commit}, pageName) {
             try {
                 const res = await fetchList(pageName);
-                debugger;
                 commit('SET_LIST', res.data)
                 return res;
             } catch(error) {
